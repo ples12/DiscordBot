@@ -1,6 +1,7 @@
-package cz.ples12.discordbot.api
+package cz.ples12.discordbot.api.command
 
-import cz.ples12.discordbot.impl.CommandPing
+import cz.ples12.discordbot.impl.command.CommandHelp
+import cz.ples12.discordbot.impl.command.CommandPing
 import org.javacord.api.event.message.MessageCreateEvent
 
 object CommandManager {
@@ -9,10 +10,11 @@ object CommandManager {
 
     fun initCommands(){
         savedCommands.add(CommandPing())
+        savedCommands.add(CommandHelp())
     }
 
-    fun runCommands(args : List<String>, event: MessageCreateEvent){
-        savedCommands.forEach {command ->
+    fun runCommands(args : Array<String>, event: MessageCreateEvent){
+        savedCommands.forEach { command ->
             command.commandNames.forEach{ name ->
                 if (name == args[0]){
                     command.execute(args, event)

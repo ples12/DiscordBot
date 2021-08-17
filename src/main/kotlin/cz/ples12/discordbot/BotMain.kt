@@ -1,6 +1,6 @@
 package cz.ples12.discordbot
 
-import cz.ples12.discordbot.api.CommandManager
+import cz.ples12.discordbot.api.command.CommandManager
 import org.javacord.api.DiscordApi
 import org.javacord.api.DiscordApiBuilder
 
@@ -8,11 +8,11 @@ object BotMain {
 
     var api : DiscordApi ? = null
 
-    val name = "Moderation Bot"
+    const val name = "Moderation Bot"
 
-    val version = 1.0
+    const val version = 1.0
 
-    val prefix = "!"
+    const val prefix = "!"
 
 }
 
@@ -26,8 +26,8 @@ object BotMain {
 
         api?.addMessageCreateListener{event ->
             if (event.messageContent.startsWith(BotMain.prefix)){
-                val args = event.messageContent.replace(BotMain.prefix, "").split(" ")
-                CommandManager.runCommands(args, event)
+                val args1 = event.messageContent.replace(BotMain.prefix, "").split(" ")
+                CommandManager.runCommands(args1.toTypedArray(), event)
             }
         }
     }
