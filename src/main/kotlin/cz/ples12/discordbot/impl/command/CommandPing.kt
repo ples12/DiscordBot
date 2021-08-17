@@ -7,7 +7,7 @@ import org.javacord.api.entity.message.embed.EmbedBuilder
 import org.javacord.api.event.message.MessageCreateEvent
 import java.awt.Color
 
-@CommandInfo(names = ["ping", "p"],description =  "sends random message (ping / pong)")
+@CommandInfo(names = ["ping"],description =  "sends random message (ping / pong)")
 class CommandPing : Command() {
 
 
