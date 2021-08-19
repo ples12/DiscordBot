@@ -12,7 +12,7 @@ object BotMain {
 
     const val version = 1.0
 
-    const val prefix = "."
+    const val prefix = "!"
 
 }
 

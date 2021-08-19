@@ -14,7 +14,7 @@ import org.javacord.api.entity.message.embed.EmbedBuilder
 import org.javacord.api.event.message.MessageCreateEvent
 import java.awt.Color
 
-@CommandInfo(names = ["play", "p"],description =  "sends random message (ping / pong)")
+@CommandInfo(names = ["play", "p"],description =  "plays a youtube video sound by entered link")
 class CommandPlay : Command() {
 
     override fun execute(args: Array<String>, event: MessageCreateEvent) {

@@ -1,9 +1,6 @@
 package cz.ples12.discordbot.api.command
 
-import cz.ples12.discordbot.impl.command.CommandDisconnect
-import cz.ples12.discordbot.impl.command.CommandHelp
-import cz.ples12.discordbot.impl.command.CommandPing
-import cz.ples12.discordbot.impl.command.CommandPlay
+import cz.ples12.discordbot.impl.command.*
 import org.javacord.api.event.message.MessageCreateEvent
 
 object CommandManager {
@@ -15,6 +12,7 @@ object CommandManager {
         savedCommands.add(CommandHelp())
         savedCommands.add(CommandPlay())
         savedCommands.add(CommandDisconnect())
+        savedCommands.add(CommandBan())
     }
 
     fun runCommands(args : Array<String>, event: MessageCreateEvent){
