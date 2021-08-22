@@ -13,6 +13,7 @@ object CommandManager {
         savedCommands.add(CommandPlay())
         savedCommands.add(CommandDisconnect())
         savedCommands.add(CommandBan())
+        savedCommands.add(CommandKick())
     }
 
     fun runCommands(args : Array<String>, event: MessageCreateEvent){

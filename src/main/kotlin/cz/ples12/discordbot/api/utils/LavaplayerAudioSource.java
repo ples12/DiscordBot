@@ -15,6 +15,7 @@ public class LavaplayerAudioSource extends AudioSourceBase {
         super(api);
         this.audioPlayer = audioPlayer;
     }
+    
 
     public byte[] getNextFrame() {
         if (lastFrame == null) {
